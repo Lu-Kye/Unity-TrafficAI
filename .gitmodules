@@ -1,0 +1,3 @@
+[submodule "Assets/Scripts/LKCore"]
+	path = Assets/Scripts/LKCore
+	url = git@github.com:Lu-Kye/Unity-LKCore.git
