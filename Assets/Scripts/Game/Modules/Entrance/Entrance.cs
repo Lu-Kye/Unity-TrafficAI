@@ -8,8 +8,13 @@ public class Entrance : MonoBehaviour
 		ConfigManager.Instance.Init();
 	}
 
+	bool isShowed = false;
 	public void ShowPath()
 	{
+		if (this.isShowed)
+			return;
+		this.isShowed = true;
+
 		TrafficAIModel.Instance.InitEdit();
 
 		var prefab = ResourceManager.Instance.Load<GameObject>(

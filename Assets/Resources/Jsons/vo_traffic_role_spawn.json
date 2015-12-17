@@ -5,6 +5,6 @@
     "role_id": 1,
     "start_node_id": 100,
     "end_node_id": 1000,
-    "interval": 10000
+    "interval": 3000
   }
 }
