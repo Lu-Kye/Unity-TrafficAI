@@ -5,14 +5,14 @@ using System;
 
 public static class TrafficAIMenu 
 {
-	[MenuItem("Game/TrafficAI/Start")]
+	[MenuItem("TrafficAI/Start")]
 	static void Start()
 	{
 		EditorApplication.OpenScene("Assets/Scenes/City.unity");
 		EditorApplication.ExecuteMenuItem("Edit/Play");
 	}
 
-	[MenuItem("Game/TrafficAI/StartEdit")]
+	[MenuItem("TrafficAI/StartEdit")]
 	static void StartEdit()
 	{
 		if (!Application.isPlaying)
@@ -22,7 +22,7 @@ public static class TrafficAIMenu
 		}
 
 		// Model init
-		ConfManager.Instance.InitConfigData();
+		ConfigManager.Instance.InitConfigData();
 		TrafficAIModel.Instance.InitEdit();
 		
 		var prefab = ResourceManager.only.Load<GameObject>(
@@ -31,7 +31,7 @@ public static class TrafficAIMenu
 			UtilGameObject.CreateByGO(prefab);
 	}
 
-	[MenuItem("Game/TrafficAI/SaveEdit")]
+	[MenuItem("TrafficAI/SaveEdit")]
 	static void SaveEdit()
 	{
 		if (UtilGameObject.Find(ResourceConfig.PREFAB_TRAFFICAIEDIT.GameObjectName, true) == null)
@@ -43,7 +43,7 @@ public static class TrafficAIMenu
 		TrafficAIExporter.Export();
 	}
 
-	[MenuItem("Game/TrafficAI/Reload")]
+	[MenuItem("TrafficAI/Reload")]
 	static void Reload()
 	{
 		if (UtilGameObject.Find(ResourceConfig.PREFAB_TRAFFICAIEDIT.GameObjectName, true) == null)
@@ -59,7 +59,7 @@ public static class TrafficAIMenu
 		StartEdit();
 	}
 
-	[MenuItem("Game/TrafficAI/Clear")]
+	[MenuItem("TrafficAI/Clear")]
 	static void Clear()
 	{
 		if (UtilGameObject.Find(ResourceConfig.PREFAB_TRAFFICAIEDIT.GameObjectName, true) == null)
@@ -75,7 +75,7 @@ public static class TrafficAIMenu
 		TrafficAIModel.Instance.Clear();
 	}
 
-	[MenuItem("Game/TrafficAI/StartAI(Beta)")]
+	[MenuItem("TrafficAI/StartAI(Beta)")]
 	static void StartAI()
 	{
 		if (UtilGameObject.Find(ResourceConfig.PREFAB_TRAFFICAIEDIT.GameObjectName, true) == null)

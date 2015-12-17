@@ -135,7 +135,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 
 	public void InitNodes()
 	{
-		var configs = ConfManager.Instance.GetElementList<Sg_Traffic_Node>();
+		var configs = ConfigManager.Instance.GetElementList<Sg_Traffic_Node>();
 		for (int i = 0, max = configs.Count; i < max; i++)
 		{
 			var config = configs[i];
@@ -232,7 +232,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 
 	public void InitEdges()
 	{
-		var configs = ConfManager.Instance.GetElementList<Sg_Traffic_Edge>();
+		var configs = ConfigManager.Instance.GetElementList<Sg_Traffic_Edge>();
 		for (int i = 0, max = configs.Count; i < max; i++)
 		{
 			var config = configs[i];
@@ -443,7 +443,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 
 	void InitRoles()
 	{
-		var configs = ConfManager.Instance.GetElementList<Sg_Traffic_Role>();
+		var configs = ConfigManager.Instance.GetElementList<Sg_Traffic_Role>();
 		for (int i = 0, max = configs.Count; i < max; i++)
 		{
 			var config = configs[i];
@@ -475,7 +475,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 
 	void InitRoleSpawns()
 	{
-		var configs = ConfManager.Instance.GetElementList<Sg_Traffic_Role_Spawn>();
+		var configs = ConfigManager.Instance.GetElementList<Sg_Traffic_Role_Spawn>();
 		for (int i = 0, max = configs.Count; i < max; i++)
 		{
 			var config = configs[i];
