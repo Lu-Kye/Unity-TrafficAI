@@ -135,7 +135,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 
 	public void InitNodes()
 	{
-		var configs = ConfigManager.Instance.GetElementList<Sg_Traffic_Node>();
+		var configs = ConfigManager.Instance.GetElementList<Vo_Traffic_Node>();
 		for (int i = 0, max = configs.Count; i < max; i++)
 		{
 			var config = configs[i];
@@ -146,7 +146,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 		this.nodeListDict[TypePeople].Sort((e1, e2) => e1.Id - e2.Id);
 	}
 
-	void InitNode(Sg_Traffic_Node config)
+	void InitNode(Vo_Traffic_Node config)
 	{
 		var type = config.type;
 		var node = new TrafficAIVoNode(config);
@@ -232,7 +232,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 
 	public void InitEdges()
 	{
-		var configs = ConfigManager.Instance.GetElementList<Sg_Traffic_Edge>();
+		var configs = ConfigManager.Instance.GetElementList<Vo_Traffic_Edge>();
 		for (int i = 0, max = configs.Count; i < max; i++)
 		{
 			var config = configs[i];
@@ -240,7 +240,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 		}
 	}
 
-	void InitEdge(Sg_Traffic_Edge config)
+	void InitEdge(Vo_Traffic_Edge config)
 	{
 		var type = config.type;
 		var edge = new TrafficAIVoEdge(config);
@@ -443,7 +443,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 
 	void InitRoles()
 	{
-		var configs = ConfigManager.Instance.GetElementList<Sg_Traffic_Role>();
+		var configs = ConfigManager.Instance.GetElementList<Vo_Traffic_Role>();
 		for (int i = 0, max = configs.Count; i < max; i++)
 		{
 			var config = configs[i];
@@ -451,7 +451,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 		}
 	}
 
-	void InitRole(Sg_Traffic_Role config)
+	void InitRole(Vo_Traffic_Role config)
 	{
 		var data = new TrafficAIVoRole(config);
 		this.roleDict.Add(data.Id, data);
@@ -475,7 +475,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 
 	void InitRoleSpawns()
 	{
-		var configs = ConfigManager.Instance.GetElementList<Sg_Traffic_Role_Spawn>();
+		var configs = ConfigManager.Instance.GetElementList<Vo_Traffic_Role_Spawn>();
 		for (int i = 0, max = configs.Count; i < max; i++)
 		{
 			var config = configs[i];
@@ -483,7 +483,7 @@ public class TrafficAIModel : LKModel<TrafficAIModel>
 		}
 	}
 
-	void InitRoleSpawn(Sg_Traffic_Role_Spawn config)
+	void InitRoleSpawn(Vo_Traffic_Role_Spawn config)
 	{
 		var data = new TrafficAIVoRoleSpawn(config);
 		this.roleSpawnDict.Add(data.Id, data);
