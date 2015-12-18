@@ -6,5 +6,13 @@
     "start_node_id": 100,
     "end_node_id": 1000,
     "interval": 3000
+  },
+  "2": {
+    "id": 2,
+    "type": 1,
+    "role_id": 1,
+    "start_node_id": 100,
+    "end_node_id": 1300,
+    "interval": 3000
   }
 }

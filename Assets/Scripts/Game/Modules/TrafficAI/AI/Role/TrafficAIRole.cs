@@ -85,7 +85,7 @@ public class TrafficAIRole : MonoBehaviour
 	{
 		this.movingPath = TrafficAIModel.Instance.GetPath(this.StartNode.Type, this.StartNode.Id, this.EndNode.Id);
 		this.CurNode.IsArrivable = false;
-		this.Velocity = Random.Range(1f, 10f);
+		this.Velocity = Random.Range(8f, 15f);
 	}
 
 	void CloseMove()

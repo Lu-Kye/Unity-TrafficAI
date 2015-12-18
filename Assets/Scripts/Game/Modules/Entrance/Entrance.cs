@@ -15,8 +15,7 @@ public class Entrance : MonoBehaviour
 			return;
 		this.isShowed = true;
 
-		TrafficAIModel.Instance.InitEdit();
-
+		TrafficAIModel.Instance.IsEdit = true;
 		var prefab = ResourceManager.Instance.Load<GameObject>(
 			ResourceConfig.PREFAB_TRAFFICAIEDIT);
 		if (UtilGameObject.Find(ResourceConfig.PREFAB_TRAFFICAIEDIT.GameObjectName, true) == null)
