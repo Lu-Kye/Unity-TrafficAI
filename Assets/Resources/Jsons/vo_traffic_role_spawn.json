@@ -10,9 +10,9 @@
   "2": {
     "id": 2,
     "type": 1,
-    "role_id": 1,
+    "role_id": 2,
     "start_node_id": 100,
     "end_node_id": 1300,
-    "interval": 3000
+    "interval": 4000
   }
 }

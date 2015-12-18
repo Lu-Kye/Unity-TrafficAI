@@ -3,5 +3,10 @@
     "id": 1,
     "type": 1,
     "resource": "RoleTest"
+  },
+  "2": {
+    "id": 2,
+    "type": 1,
+    "resource": "RoleTest1"
   }
 }
